@@ -1,5 +1,29 @@
+:root {
+  /* Color variables */
+  --primary-color: #495e57;
+  --secondary-color: #f4ce14;
+  --light-bg-color: #edefee;
+  --dark-bg-color: #464646;
+  --text-color: #000000;
+  --light-text-color: #ffffff;
+  --input-bg-color: #eeeeee;
+  
+  /* Typography variables */
+  --heading-font: "Markazi Text", serif;
+  --body-font: "Karla", sans-serif;
+  
+  /* Spacing variables */
+  --section-padding: 2rem 5rem;
+  --card-padding: 1rem;
+  --button-padding: 0.5rem 1rem;
+  
+  /* Border radius */
+  --border-radius: 0.2rem;
+}
+
 * {
-  font-family: "Markazi Text", "Karla", serif;
+  font-family: var(--heading-font);
+  box-sizing: border-box;
 }
 
 label,
@@ -7,17 +31,17 @@ input,
 select,
 textarea,
 p {
-  font-family: "Karla";
+  font-family: var(--body-font);
 }
 
 input,
 select,
 option,
 textarea {
-  background-color: #eeeeee;
+  background-color: var(--input-bg-color);
   border: none;
-  padding: 5px 5px 5px 5px;
-  border-radius: 0.2rem;
+  padding: 5px;
+  border-radius: var(--border-radius);
   resize: none;
 }
 
@@ -51,23 +75,24 @@ Link:visited,
 a:link,
 Link:link {
   text-decoration: none;
-  color: black;
+  color: var(--text-color);
 }
 
 .action-button {
-  background-color: #f4ce14;
-  padding: 0.5rem 1rem 0.5rem 1rem;
-  border-radius: 0.2rem;
-  font-family: "Karla";
+  background-color: var(--secondary-color);
+  padding: var(--button-padding);
+  border-radius: var(--border-radius);
+  font-family: var(--body-font);
   font-size: 2rem;
+  cursor: pointer;
 }
 
 .action-button:hover {
-  background-color: #495e57;
-  color: #eeeeee;
+  background-color: var(--primary-color);
+  color: var(--light-text-color);
   border-style: solid;
   border-width: 1px;
-  border-color: #edefee;
+  border-color: var(--light-bg-color);
   transition: 0.2s;
 }
 
@@ -75,7 +100,7 @@ Link:link {
   margin-top: -2rem;
 }
 
-/* NAVBAR STYLING */
+/* SECTION: NAVBAR STYLING */
 .navbar-menu {
   grid-template-columns: repeat(7, 1fr);
   align-items: center;
@@ -99,7 +124,7 @@ Link:link {
 }
 
 .hover-effect:hover {
-  background-color: #f4ce14;
+  background-color: var(--secondary-color);
   transition: 0.25s;
 }
 
@@ -109,10 +134,10 @@ Link:link {
   margin-left: -1.25rem;
 }
 
-/* CALL TO ACTION */
+/* SECTION: CALL TO ACTION */
 .call-to-action {
-  background-color: #495e57;
-  color: white;
+  background-color: var(--primary-color);
+  color: var(--light-text-color);
   display: grid;
   grid-template-columns: 1fr 1fr;
   padding: 1.25rem 5rem 1.2rem 5rem;
@@ -140,9 +165,9 @@ Link:link {
   object-fit: cover;
 }
 
-/* SPECIALS */
+/* SECTION: SPECIALS */
 .specials {
-  padding: 2rem 5rem 0 5rem;
+  padding: var(--section-padding);
   animation-duration: 0.33s;
   animation-timing-function: ease-in-out;
   animation-name: slideDownFade;
@@ -166,8 +191,10 @@ Link:link {
 }
 
 .menu-card {
-  background-color: #edefee;
+  background-color: var(--light-bg-color);
   padding-bottom: 1rem;
+  border-radius: var(--border-radius);
+  overflow: hidden;
 }
 
 .menu-card > img {
@@ -191,18 +218,19 @@ Link:link {
 }
 
 .special-button {
-  background-color: #f4ce14;
-  border-radius: 0.2rem;
+  background-color: var(--secondary-color);
+  border-radius: var(--border-radius);
   font-size: 1.5rem;
   padding: 0.5rem;
+  cursor: pointer;
 }
 
 .special-button:hover {
-  background-color: #495e57;
-  color: #eeeeee;
+  background-color: var(--primary-color);
+  color: var(--light-text-color);
   border-style: solid;
   border-width: 0.1rem;
-  border-color: black;
+  border-color: var(--text-color);
   transition: 0.2s;
 }
 
@@ -210,9 +238,10 @@ Link:link {
   display: none;
 }
 
-/* TESTIMONIAL CARDS */
+/* SECTION: TESTIMONIAL CARDS */
 .testimonials {
-  padding: 0 5rem 2rem 5rem;
+  padding: var(--section-padding);
+  padding-bottom: 2rem;
   animation-duration: 0.33s;
   animation-timing-function: ease-in-out;
   animation-name: slideDownFade;
@@ -233,8 +262,9 @@ Link:link {
 }
 
 .testimonial-card {
-  background-color: #edefee;
-  padding: 1rem 1rem 0 1rem;
+  background-color: var(--light-bg-color);
+  padding: var(--card-padding);
+  border-radius: var(--border-radius);
 }
 
 .testimonial-card > img {
@@ -251,9 +281,9 @@ Link:link {
   margin: 0 2rem 0 2rem;
 }
 
-/* ABOUT */
+/* SECTION: ABOUT */
 .about-us {
-  background-color: #f4ce14;
+  background-color: var(--secondary-color);
   display: grid;
   grid-template-columns: 1fr 1fr;
   padding: 1.25rem 5rem 2.5rem 5rem;
@@ -291,11 +321,11 @@ Link:link {
   left: 5rem;
 }
 
-/* FOOTER STYLING */
+/* SECTION: FOOTER STYLING */
 footer {
   min-height: 13rem;
-  background-color: #495e57;
-  color: #ffffff;
+  background-color: var(--primary-color);
+  color: var(--light-text-color);
   padding-bottom: 1rem;
   margin-top: -1.4rem;
 }
@@ -318,14 +348,14 @@ footer > menu {
 .footer-links > li {
   text-align: left;
   display: block;
-  color: white;
+  color: var(--light-text-color);
   padding-top: 0.2rem;
-  font-family: "Karla", "Sans Serif";
+  font-family: var(--body-font);
 }
 
 .footer-links > a:hover,
 .footer-links > Link:hover {
-  background-color: #495e57;
+  background-color: var(--primary-color);
   text-decoration: underline;
 }
 
@@ -348,11 +378,11 @@ footer > menu {
   padding: 0.5rem;
 }
 
-/* RESERVE A TABLE */
+/* SECTION: RESERVE A TABLE */
 .reserve-table {
   position: relative;
   text-align: center;
-  color: white;
+  color: var(--light-text-color);
   margin-top: -1.4rem;
 }
 
@@ -363,14 +393,14 @@ footer > menu {
 }
 
 .reserve-header-text {
-  background-color: #495e57;
-  padding: 0 3rem 0 3rem;
+  background-color: var(--primary-color);
+  padding: 0 3rem;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   font-size: 25px;
-  border-radius: 0.5rem;
+  border-radius: var(--border-radius);
 }
 
 .reservation-form {
@@ -407,29 +437,34 @@ footer > menu {
 }
 
 .redirect-button {
-  background-color: #464646;
-  color: white !important;
-  padding: 2vh 2rem 2vh 2rem;
-  border-radius: 0.5rem;
+  background-color: var(--dark-bg-color);
+  color: var(--light-text-color) !important;
+  padding: 2vh 2rem;
+  border-radius: var(--border-radius);
   min-width: 12vw;
-  font-family: "Karla";
+  font-family: var(--body-font);
   font-size: 18px;
+  cursor: pointer;
 }
 
 .redirect-button:hover {
-  background-color: #f4ce14;
-  color: #464646 !important;
+  background-color: var(--secondary-color);
+  color: var(--dark-bg-color) !important;
   transition: 0.2s;
 }
 
-/* MEDIA QUERIES*/
+/* MEDIA QUERIES */
 @media screen and (max-width: 60rem) {
+  :root {
+    --section-padding: 1rem 2rem;
+  }
+  
   .action-button {
     font-size: 1.2rem;
   }
 
   .specials {
-    margin: 0 -2rem 0 -2rem;
+    margin: 0 -2rem;
   }
 
   .specials-topbar {
@@ -450,7 +485,7 @@ footer > menu {
   }
 
   .testimonials-topbar > h1 {
-    margin: 2rem 0 1rem 0;
+    margin: 2rem 0 1rem;
   }
 
   .double-image {
@@ -473,7 +508,7 @@ footer > menu {
 
   .testimonials-carousel {
     display: block;
-    background-color: #edefee;
+    background-color: var(--light-bg-color);
     padding-bottom: 0;
   }
 
@@ -496,9 +531,13 @@ footer > menu {
 }
 
 @media screen and (max-width: 600px) {
+  :root {
+    --section-padding: 0.5rem 1rem;
+  }
+  
   .hero-text > h1 {
     font-size: 2.2rem;
-    margin-top: 0rem;
+    margin-top: 0;
     margin-bottom: -2rem;
   }
 
@@ -508,7 +547,7 @@ footer > menu {
   }
 
   .confirmation-header {
-    margin-top: 0rem;
+    margin-top: 0;
   }
 
   .reserve-header-text {
@@ -521,26 +560,26 @@ footer > menu {
 
   .mobile {
     display: grid;
-    grid-template: auto auto auto auto auto auto auto / auto;
+    grid-template: repeat(7, auto) / auto;
     align-items: center;
     padding-left: 0;
   }
 
   .call-to-action {
     margin: 0;
-    padding: 1.25rem 2rem 1.2rem 2rem;
+    padding: 1.25rem 2rem 1.2rem;
   }
 
   .specials {
-    padding: 0 2rem 0 2rem;
+    padding: 0 2rem;
   }
 
   .testimonials {
-    padding: 0 2rem 0 2rem;
+    padding: 0 2rem;
   }
 
   .about-us {
-    padding: 1rem 2rem 0 2rem;
+    padding: 1rem 2rem 0;
     margin-top: 2rem;
     grid-gap: 1vw;
   }
@@ -596,15 +635,16 @@ footer > menu {
   }
 
   .reserve-table {
-    margin-top: 0rem;
+    margin-top: 0;
   }
 
   .redirect-button {
-    padding: 1vh 2rem 1vh 2rem;
+    padding: 1vh 2rem;
     font-size: 14px;
   }
 }
 
+/* ANIMATIONS */
 @keyframes slideDownFade {
   0% {
     transform: translateY(-15%);
@@ -616,6 +656,7 @@ footer > menu {
   }
 }
 
+/* CAROUSEL CUSTOMIZATION */
 .carousel > .thumbs-wrapper {
   display: none;
 }
