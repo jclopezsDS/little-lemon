@@ -327,11 +327,19 @@ footer {
   background-color: var(--primary-color);
   color: var(--light-text-color);
   padding-bottom: 1rem;
-  margin-top: -1.4rem;
+  margin-top: 4rem;
 }
 
 footer > menu {
-  grid-template-columns: repeat(4, 1fr);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around; /* Optional: distribute space */
+  align-items: flex-start; /* Optional: align items at the start */
+  gap: 20px; /* Add gap between flex items */
+}
+footer > menu > li {
+  padding: 1rem;
+  flex: 1; /* Allow items to grow and shrink equally */
 }
 
 .footer-header {
@@ -361,18 +369,17 @@ footer > menu {
 
 .img-footer {
   display: flex;
-  position: relative;
   justify-content: center;
   align-content: center;
+  width: 150px; /* Set a fixed width for the logo container */
 }
 
 .img-footer > img {
+  max-width: 100%;
   max-height: 8rem;
-  position: absolute;
-  top: 50%;
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
   margin-right: 3rem;
+  width: 100px; /* Set a fixed width for the image */
+  height: auto; /* Maintain aspect ratio */
 
   background-color: white;
   padding: 0.5rem;

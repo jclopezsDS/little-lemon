@@ -9,8 +9,7 @@ export default function Footer() {
             alt="Little Lemon logo"
           ></img>
         </li>
-        <li className="contact">
-          <h1 className="footer-header">Navigation</h1>
+        <li>
           <ul className="footer-links">
             <Link to="/">Home</Link>
             <Link to="/about">About</Link>
@@ -28,7 +27,6 @@ export default function Footer() {
         </li>
 
         <li>
-          <h1 className="footer-header">Contact</h1>
           <ul className="footer-links">
             <li>2395 Maldove Way,</li>
             <li>Chicago Illinois</li>
@@ -45,7 +43,6 @@ export default function Footer() {
           </ul>
         </li>
         <li>
-          <h1 className="footer-header">Connect</h1>
           <ul className="footer-links">
             <a
               href="https://www.facebook.com/"
